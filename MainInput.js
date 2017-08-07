@@ -1,8 +1,6 @@
 import React from 'react';
 import { View,TextInput,StyleSheet, Text, AppRegistry} from 'react-native';
 
-
-
 export default class MainInput extends React.Component {
     constructor(props){
         super(props);
@@ -39,9 +37,7 @@ export default class MainInput extends React.Component {
                />
 
 	      </View>
-               
-	     
-	       
+              	       
 	    );
     }
 }

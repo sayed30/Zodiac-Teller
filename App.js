@@ -13,9 +13,7 @@ export default class App extends React.Component {
 	}
 	
 	
-    }
-
-    
+    }    
     render(){
       
 	return( 
@@ -23,10 +21,6 @@ export default class App extends React.Component {
 	       <Image source ={backgroundMain} style={styles.backgroundImage}>
 	       <View style={styles.container}>
 	    <StatusBar hidden={true}/>
-	       
-	      
-
-
 	       <Text style={[styles.baseText,styles.titleText]}>Zodiac Teller!</Text>           
 	       <Text style={[styles.baseText,styles.titleText]}>Enter a Birthday: </Text> 
 
@@ -51,8 +45,6 @@ export default class App extends React.Component {
  
     }
 }
-
-
 
 // Flex is important to parent and children relationship.
 // The axis matters too, row vs Colums etc
@@ -107,8 +99,4 @@ const styles = StyleSheet.create({
             textAlign: 'center'
   }
      
-
-
-
-
 });
