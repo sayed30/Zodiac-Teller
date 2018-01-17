@@ -46,32 +46,28 @@ export default class FirstScreen extends React.Component {
 
         return (
 
-            <
-            Image source = {
+            <Image source = {
                 backgroundMain
             }
-            style = {
+ 				style = {
                 styles.backgroundImage
-            } >
-            <
-            View style = {
+            }>
+            <View style = {
                 styles.container
-            } >
-            <
-            StatusBar hidden = {
+            }>
+            <StatusBar hidden = {
                 true
-            }
-            /> <
-            Text style = {
+            }/> 
+            <Text style = {
                 [styles.baseText, styles.titleText]
-            } > Zodiac Teller! < /Text>            <
-            Text style = {
+            } > Zodiac Teller! < /Text>            
+            <Text style = {
                 [styles.baseText, styles.titleText]
-            } > Enter a Birthday: < /Text>  <
-            Text style = {
+            } > Enter a Birthday:< /Text>  
+            <Text style = {
                 [styles.baseText, styles.titleText]
-            } > Month: < /Text>       <
-            TextInput style = {
+            } > Month: < /Text>       
+            <TextInput style = {
                 {
                     height: 40,
                     borderColor: 'white',
@@ -93,11 +89,10 @@ export default class FirstScreen extends React.Component {
             }
             />
 
-            <
-            Text style = {
+            <Text style = {
                 [styles.baseText, styles.titleText]
-            } > Day: < /Text> <
-            TextInput style = {
+            } > Day: < /Text> 
+            <TextInput style = {
                 {
                     height: 40,
                     borderColor: 'white',
@@ -119,10 +114,7 @@ export default class FirstScreen extends React.Component {
             }
             />
 
-
-
-            <
-            TouchableHighlight onPress = {
+            <TouchableHighlight onPress = {
                 () => {
                     const {
                         navigate
@@ -133,27 +125,20 @@ export default class FirstScreen extends React.Component {
                     });
                 }
             } >
-            <
-            Text style = {
+            <Text style = {
                 styles.button
-            } > Submit < /Text> <
-            /TouchableHighlight>
+            } > Submit < /Text> 
+            < /TouchableHighlight >
 
 
-
-
-
-
-            <
-            Text > {
+            <Text > {
                 this.state.day
-            } < /Text> <
-            Text > {
+            } < /Text> 
+            <Text > {
                 this.state.month
             } < /Text>
 
-            <
-            Image style = {
+            <Image style = {
                 styles.pic
             }
             source = {
@@ -161,9 +146,8 @@ export default class FirstScreen extends React.Component {
             }
             />	               
 
-            <
-            /View> <
-            /Image>
+            </View> 
+				< /Image >
         );
 
     }

@@ -78,52 +78,49 @@ export default class ComponentPic extends React.Component {
 
         return (
 
-            <
-            Image source = {
+            <Image source = {
                 backgroundMain
             }
             style = {
                 styles.backgroundImage
             } >
-            <
-            View style = {
+            <View style = {
                 [styles.container]
             } >
 
-            <
-            Text style = {
+            <Text style = {
                 {
                     color: "white"
                 }
-            } > {
+            } > 
+            {
                 sign
-            } < /Text> <
-            Text style = {
+            } 
+            < /Text> 
+
+            <Text style = {
                 {
                     color: "white"
                 }
-            } > {
+            } > 
+            {
                 this.state.data.substring(21, this.state.data.length - 5)
-            } < /Text>
+            } 
+            < /Text>
 
-            <
-            Text style = {
+            <Text style = {
                 {
                     color: "white"
                 }
-            } > {
+            } > 
+            {
                 month
-            } < /Text>
+            } 
+            < /Text>
 
 
-
-
-
-
-
-            <
-            /View> <
-            /Image>
+            </View> 
+            </Image>
         );
 
     }
