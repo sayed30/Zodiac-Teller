@@ -31,9 +31,6 @@ export default class FirstScreen extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-       
-            score: '1',
-            text: 'Place holder text',
             month: '',
             day: '',
             date: ''
@@ -54,7 +51,7 @@ export default class FirstScreen extends React.Component {
             <Image source = {
                 backgroundMain
             }
- 				style = {
+ 		style = {
                 styles.backgroundImage
             }>
             <View style = {
@@ -77,8 +74,8 @@ export default class FirstScreen extends React.Component {
 
 
           confirmBtnText="Confirm"
-        cancelBtnText="Cancel"
-        iconSource={zodiacpic}
+          cancelBtnText="Cancel"
+          iconSource={zodiacpic}
 
           
         />
@@ -120,7 +117,7 @@ export default class FirstScreen extends React.Component {
             />	               
 
             </View> 
-				< /Image >
+	   < /Image >
         );
 
     }
