@@ -15,6 +15,12 @@ const {
 } = Dimensions.get('window');
 import zodiacpic from './zodiacpic.jpg';
 import backgroundMain from './backgroundMain.jpg'
+import DatePicker from 'react-native-datepicker'
+
+
+ 
+
+
 import {
     StackNavigator
 } from 'react-navigation';
@@ -29,21 +35,24 @@ export default class FirstScreen extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+       
             score: '1',
             text: 'Place holder text',
             month: '',
-            day: ''
+            day: '',
+            date: ''
         }
 
-
     }
+ 
 
     render() {
         var {
             navigate
         } = this.props.navigation;
 
-
+        var month = this.state.date.substring(5,7);
+        var day = this.state.date.substring(8,10);
         return (
 
             <Image source = {
@@ -60,68 +69,32 @@ export default class FirstScreen extends React.Component {
             }/> 
             <Text style = {
                 [styles.baseText, styles.titleText]
-            } > Zodiac Teller! < /Text>            
+            } > Zodiac Teller! < /Text> 
+
             <Text style = {
                 [styles.baseText, styles.titleText]
             } > Enter a Birthday:< /Text>  
-            <Text style = {
-                [styles.baseText, styles.titleText]
-            } > Month: < /Text>       
-            <TextInput style = {
-                {
-                    height: 40,
-                    borderColor: 'white',
-                    borderWidth: 2,
-                    width: 40,
-                    color: "white",
-                    textAlign: 'center',
-                    backgroundColor: '#2c67a5'
-                }
-            }
-            keyboardType = 'numeric'
-            onChangeText = {
-                (month) => this.setState({
-                    month
-                })
-            }
-            value = {
-                this.state.month
-            }
-            />
+    
+        <DatePicker style={styles.calendar}
+          onDateChange={(date) => {this.setState({date: date})}}
+          value={this.state.date}
 
-            <Text style = {
-                [styles.baseText, styles.titleText]
-            } > Day: < /Text> 
-            <TextInput style = {
-                {
-                    height: 40,
-                    borderColor: 'white',
-                    borderWidth: 2,
-                    width: 40,
-                    color: "white",
-                    textAlign: 'center',
-                    backgroundColor: '#2c67a5'
-                }
-            }
-            keyboardType = 'numeric'
-            onChangeText = {
-                (day) => this.setState({
-                    day
-                })
-            }
-            value = {
-                this.state.day
-            }
-            />
 
-            <TouchableHighlight onPress = {
+          confirmBtnText="Confirm"
+        cancelBtnText="Cancel"
+        iconSource={zodiacpic}
+
+          
+        />
+      
+         <TouchableHighlight onPress = {
                 () => {
                     const {
                         navigate
                     } = this.props.navigation;
                     navigate('Second', {
-                        month: this.state.month,
-                        day: this.state.day
+                        month: month,
+                        day: day
                     });
                 }
             } >
@@ -129,13 +102,17 @@ export default class FirstScreen extends React.Component {
                 styles.button
             } > Submit < /Text> 
             < /TouchableHighlight >
+            
 
 
             <Text > {
-                this.state.day
+                day
             } < /Text> 
             <Text > {
-                this.state.month
+                this.state.date
+            } < /Text> 
+            <Text > {
+               month
             } < /Text>
 
             <Image style = {
@@ -181,6 +158,12 @@ const styles = StyleSheet.create({
         // or 'stretch',
     },
 
+    calendar: {
+        width:300,
+        backgroundColor:"white",
+        borderWidth:20
+    },
+
     baseText: {
         fontFamily: 'Cochin',
 
@@ -199,7 +182,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#2c67a5',
         fontSize: 30,
         color: 'white',
-        margin: 10,
+        margin: 70,
         padding: 10,
         borderWidth: 2,
         borderColor: 'white',
