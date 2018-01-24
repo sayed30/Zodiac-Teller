@@ -17,10 +17,6 @@ import zodiacpic from './zodiacpic.jpg';
 import backgroundMain from './backgroundMain.jpg'
 import DatePicker from 'react-native-datepicker'
 
-
- 
-
-
 import {
     StackNavigator
 } from 'react-navigation';
