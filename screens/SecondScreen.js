@@ -11,9 +11,6 @@ import {
     AlertIOS
 } from 'react-native';
 
-const API = 'https://hn.algolia.com/api/v1/search?query=';
-const DEFAULT_QUERY = 'redux';
-
 
 import zodiacpic from './zodiacpic.jpg';
 import backgroundMain from './backgroundMain.jpg'
